@@ -1,0 +1,54 @@
+<html>
+<head>
+</head>
+<body>
+<div style="background:#e0e0e0 none repeat scroll 0 0; font-weight: bold; padding: 0.5em;">
+	<p style="font-size: 20px; padding-left: 20px; line-height: 30px; text-align: center; color: rgb(1, 24, 116);"> Manage Clinicians </p><br>
+	<p style="width:70%;left: 162px;position: relative;text-align: center;">
+		<span>Confirm this list contains the clinicians you manage.&nbsp; You can add additional clinicians using the Add button, 
+		or you can remove them with Edit/Delete. Once complete, you can verify each clinician online or you can download an Excel roster to edit offline.</span>
+	</p>
+	<div style="border-radius: 4px;box-shadow: 2px 4px 5px #888888;background:white;width:70%;left: 162px;position: relative;text-align: center;">
+		<table width="100%">
+			<tr>
+				<td>
+					<div>
+						<span>CLINICIAL I MANAGE</span> &nbsp; &nbsp; &nbsp;
+						<span>CLINICIANS MANAGED BY OTHERS</span>&nbsp;&nbsp;&nbsp;
+						<span>CLINICIANS WITHOUT A MANAGER</span>&nbsp;&nbsp;&nbsp;
+						<span>ADD</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<select id="" class=''>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table  width="100%" class="ux-tabl-data" id="">
+						<thead>
+							<tr>
+								<th><a href="javascript:;">Clinician Name</a></th>
+								<th><a href="javascript:;">Practice Address</a></th>
+								<th><a href="javascript:;">Last Verified</a></th>
+								<th><a href="javascript:;">Verified Status</a></th>
+								<th><a href="javascript:;">Application</a></th>
+								<th><a href="javascript:;"></a></th>
+								<th><a href="javascript:;">Actions</a></th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

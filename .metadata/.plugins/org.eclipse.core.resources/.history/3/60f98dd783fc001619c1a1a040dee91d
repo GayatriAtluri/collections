@@ -1,0 +1,5 @@
+package com.lexisnexis.healthcare.vh.ommanageclinicianlist;
+
+public class ManageClinicianListController {
+
+}

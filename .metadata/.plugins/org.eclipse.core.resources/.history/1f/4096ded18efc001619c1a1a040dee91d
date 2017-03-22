@@ -1,0 +1,47 @@
+package com.lexisnexis.healthcare.vh.ommanageclinicianlist;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.lexisnexis.healthcare.vh.core.common.AbstractVhController;
+import com.lexisnexis.healthcare.vh.providerdashboard.hospitalaffiliations.HospitalAffiliationsController;
+
+@Controller
+public class ManageClinicianListController {
+	private static final Logger logger = LoggerFactory.getLogger(ManageClinicianListController.class);
+	
+	public static final String TITLE = "Manage Clinician List";
+	public static final String SCREEN_NAME = "omVerifyData";
+	public static final String MAIN_URL = SCREEN_NAME;
+
+	public static final String BACK_URL = MAIN_URL + AbstractVhController.POSTFIX_BACK;
+	public static final String FORWARD_URL = MAIN_URL + AbstractVhController.POSTFIX_FORWARD;
+	public static final String GRID_GET_URL = MAIN_URL+POSTFIX_GRID_GET;
+	public static final String GRID_REFRESH_URL = MAIN_URL+POSTFIX_GRID_REFRESH;
+	public static final String DOUBLE_CLICK_URL = MAIN_URL+POSTFIX_DOUBLE_CLICK;
+	
+	public static final String HEADERS = "headers";
+	public static final String GRID_GET_URL = MAIN_URL + POSTFIX_GRID_GET;
+	public static final String TAXONOMY_SPECIALITY = MAIN_URL + "speciality";
+	
+	public static final String CONTENT_TYPE = "text/json;charset=utf-8";
+	
+	@RequestMapping(value = "/" + MAIN_URL)
+	public String verifyData(HttpServletRequest request,
+			HttpServletResponse response, Model model) {
+		return handleLoadProviders(request, response,model);	}
+	
+	@Override
+	public void initialize(HttpServletRequest request, Model model, AbstractForm form) {
+		super.initialize(request, model, form);
+		model.addAttribute(HEADERS, ((ManageCliniciansListForm) form).getHeaders());
+	}
+	
+	@Autowired
+	@Qualifier(TabStatusServiceImpl.BEAN_NAME)
+	private TabStatusService tabStatusService;
+
+	@Override
+	public String getScreenName() {
+		return SCREEN_NAME;
+}
